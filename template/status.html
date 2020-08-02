@@ -1,0 +1,30 @@
+{% extends 'loan.html' %}
+<html>
+<head>
+<title>{% block title %}Status{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<div class="container mt-5 mx-auto" style="width: 190px">
+<div class="row">
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header"><h4>Loan Status</h4></div>
+  <div class="card-body">
+    
+    <p class="card-text">
+    	{% for record,record1 in a %}
+<label>Loan Amount: {{record1.loan_amount}}</label><br>
+<label>Paid: {{record.paid}}</label><br>
+<label>Remaining: {{record.remaining}}</label>
+<!-- not nill -->
+{% empty %}
+nill   
+{% endfor %}
+    </p>
+  </div>
+</div>
+
+
+	
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- {% extends "loan.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title></title>
+</head>
+<body>
+    {% block content %}
+    {% for x in ldetail %}
+    <form method="POST"> {% csrf_token %}
+    <input class="form-control" type="text" value="{{x.amount}}" placeholder="Readonly input here…" readonly>
+    </form>
+    {% endfor %} 
+    {% endblock %}
+</body>
+</html> -->

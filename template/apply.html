@@ -1,0 +1,59 @@
+{% extends 'loan.html' %}
+<html>
+<head>
+<title>{% block title %}Apply{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<div class="container mt-5 mx-auto" style="width: 190px">
+<form method="POST"> {% csrf_token %}
+<div class="row">
+<div class="col-sm-2">
+<label>Name: {{forms.name1}}</label>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+<label>Address: {{forms.address}}</label>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2">
+<label>Mobile No.: {{forms.mobile}}</label>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-2">
+<label>Adhar No.: {{forms.adhar_no}}</label>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2">
+<label>Credit: {{forms.credit}}</label>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2">
+<label>Loan Amount Required: {{forms.loan_amount}}</label>
+</div>
+</div>
+<br>
+<button type="submit" class="btn btn-dark">Apply</button>
+
+
+
+
+
+</form>
+
+
+</div>
+
+
+
+{% endblock %}
+</body>
+</html>

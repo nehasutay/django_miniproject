@@ -1,0 +1,65 @@
+{% extends 'homepage.html' %}
+<html>
+    <head>
+        <title>{% block title %}Profile{% endblock %}</title>
+    </head>
+    <body>
+        
+       
+        <!-- <div class="row">
+            <div class="col-sm-6">
+              <div class="card" style="background-color: #c2c2d6">
+                <div class="card-body">
+                  <h5 class="card-title">Personal Information</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> 
+                  <a href="/seeprofile" class="btn btn-info">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card" style="background-color: #c2c2d6">
+                <div class="card-body">
+                  <h5 class="card-title">Loan Information</h5>
+                 <a href="/seedetails" class="btn btn-info">See Details</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          {% block content %}
+          <div class="container mt-5 mx-auto" style="width: 1500px">
+          {% for abcde in detail %}
+        
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Name</label>
+                <input type="text" value="{{abcde.name}}" class="form-control" id="inputName">
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputAddress">Address</label>
+              <input type="text" value="{{abcde.address}}" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+          </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+              <label for="mobileno">Mobile No</label>
+              <input type="number" value="{{abcde.mobile}}" class="form-control" id="inputMobileNo" placeholder="9876543210">
+            </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+              <label for="aadharno">Aadhar No</label>
+              <input type="number" value="{{abcde.adhar_no}}" class="form-control" id="inputAadharNo" placeholder="112233445566">
+            </div>
+            </div>
+            </div>
+          </form>
+        
+          
+          {% endfor %}
+        </div>
+        {% endblock %}
+    </body>
+</html>

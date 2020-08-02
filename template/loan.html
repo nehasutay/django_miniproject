@@ -1,0 +1,46 @@
+{% extends 'homepage.html' %}
+<html>
+<head>
+<title>{% block title %}Profile{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<!-- <center> -->
+<div class="container mt-5 mx-auto" style="width: 1000px">
+<div class="row">
+<div class="col">
+<div class="card" style="width: 18rem; background-color:  #919188; margin-top: 120px">
+<div class="card-body">
+<h5 class="card-title">Apply for Loan</h5>
+<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+<a href="/apply" class="btn btn-dark">Apply Now</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card" style="width: 18rem; background-color:  #919188; margin-top: 120px">
+<div class="card-body">
+<h5 class="card-title">Your Loan History</h5>
+<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+<a href="/transdis" class="btn btn-dark">Loan History</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card" style="width: 18rem; background-color:  #919188; margin-top: 120px">
+<div class="card-body">
+<h5 class="card-title">Your Loan Status</h5>
+<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+<a href="/status" class="btn btn-dark">Loan Status</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'homepage.html' %}
+
+      {% block title %}Services{% endblock %}</title>
+    
+        {% block content %}
+        <table class="table table-sm table-dark mx-auto" style="width: 1000px; margin-top: 40px">
+  <thead>
+    <tr>
+      <th scope="col">Txn Date</th>
+      <th scope="col">Description</th>
+      <th scope="col">Ref No/Cheque No.</th>
+      <th scope="col">Debit</th>
+      <th scope="col">Credit</th>
+      <th scope="col">Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for x in hdetail %}
+  	 <tr>
+
+        <td>{{x.histdate}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.cheque}}</td>
+        <td>{{x.debit}}</td>
+        <td>{{x.credit}}</td>
+        <td>{{x.balance}}</td> 
+    </tr>
+    
+
+  	
+{% endfor %}
+  </tbody>
+</table>
+
+        {% endblock %}

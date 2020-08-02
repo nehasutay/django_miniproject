@@ -1,0 +1,36 @@
+{% extends 'profile.html' %}
+<html>
+    <head>
+        <title>{% block title %}Loan History{% endblock %}</title>
+    </head>
+<body>
+        {% block content %}
+        {% for x in detail %}
+<table class="table">
+ <thead>
+    <tr>
+        
+        <th>Address</th>
+        <th>Mobile No.</th>
+        <th>Adhar No.</th>
+        <th>Deposits</th>
+        <th>Pending</th>
+        <th>Loan Details</th>
+    </tr>
+</thead>
+    <tr>
+
+        <td>{{x.address}}</td>
+        <td>{{x.mobile}}</td>
+        <td>{{x.adhar_no}}</td>
+        <td>{{x.payment}}</td>
+        <td>{{x.pending}}</td>
+        <td>{{x.loan_details}}</td> 
+    </tr>
+
+</table>
+
+{% endfor %}
+{% endblock %}
+</body>
+</html>

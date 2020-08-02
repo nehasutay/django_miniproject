@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST">{% csrf_token %}
+
+		<center>Name: {{forms.fullname }}</center><br>
+		<center>Address: {{forms.address}}</center><br>
+		<br>
+		<center>Mobile No.: {{forms.mobile}}</center><br>
+		<br>
+		<center>Adhar No.: {{forms.adhar_no}}</center><br>
+		<br>
+	    <!--<center>Deposit: {{forms.payment}}</center><br>
+		<br>
+		<center>Amount Pending: {{forms.pending}}</center><br>
+		<br>
+		<center>Loan Details: {{forms.loan_details}}</center><br>
+		<br> -->
+		<center><button type="submit">Submit</button></center>
+	
+	</form>
+
+</body>
+</html>

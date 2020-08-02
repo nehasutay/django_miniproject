@@ -1,0 +1,44 @@
+{% extends 'loan.html' %}
+{% block title %}Services{% endblock %}</title>
+    
+        {% block content %}
+        <table class="table table-sm table-dark mx-auto" style="width: 1000px; margin-top: 40px">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Loan Payment</th>
+      <th scope="col">Principal Amount</th>
+      <th scope="col">Interest</th>
+      <th scope="col">Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+  	
+{% for x in obj %}
+<tr>
+<td>{{x.start}}</td>
+<td>{{x.paid}}</td>
+<td>{{x.principal}}</td>
+<td>{{x.interest}}</td>
+<td>{{x.remaining}}</td>
+<td colspan="2"></td>
+
+ </tr>
+
+{% endfor %}
+{% for x in obj5 %}
+<tr>
+      <th scope="row" colspan="5">Total Amount : {{x.loan_amount}}</th>
+      
+      
+    </tr>   
+
+{% endfor %}	
+
+  </tbody>
+</table>
+
+        {% endblock %}
+
+
+
