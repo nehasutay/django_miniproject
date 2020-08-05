@@ -7,9 +7,6 @@ from app.models import userdetail
 from app.models import loanapply,transaction,transactionhistory
 from app.form import loanform
 from app.form import transform, histform
-from django.db.models import Window, Sum, F
-from django.db.models.functions import Lead
-
 
 
 
@@ -119,6 +116,9 @@ def trans(request):
 def transdis(request):
     obj=transaction.objects.filter(owner__username=request.user).values()
     obj5=loanapply.objects.filter(member__username=request.user).values()
+    # print(obj)
+    # if(obj) :
+    #     print("none")
     print(obj[0]['id'])
     balance=obj[0]['principal'] - obj[0]['paid']
     transaction.objects.filter(owner__username=request.user).update(remaining=balance)
